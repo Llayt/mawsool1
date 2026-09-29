@@ -15,7 +15,7 @@ interface AppHeaderProps {
 export function BrandLogo({ className = '' }: { className?: string }) {
   return (
     <img
-      src="/image copy 4.png"
+      src="/mawsoul-logo-transparent.png"
       alt="موصول — من التشريعات إلى كل الخدمات الحكومية"
       className={`brand-logo ${className}`}
     />
