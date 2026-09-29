@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mawsoul-green: #064b43;
+  --mawsoul-green-light: #0d806d;
+  --mawsoul-green-dark: #032e2d;
+  --mawsoul-teal: #16a889;
+  --mawsoul-teal-light: #5bc9ae;
+  --mawsoul-teal-dark: #08715f;
+  --mawsoul-cream: #f8faf9;
+  --mawsoul-ink: #092b28;
+}
+
+* {
+  font-family: 'Tajawal', 'Segoe UI', sans-serif;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f6f0;
+  color: #1a2e22;
+  margin: 0;
+  min-height: 100vh;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl bg-emerald-800 text-white font-medium transition-all duration-200 hover:bg-emerald-900 hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-gold {
+    @apply px-6 py-3 rounded-xl bg-teal-700 text-white font-medium transition-all duration-200 hover:bg-teal-800 hover:shadow-lg active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-outline {
+    @apply px-6 py-3 rounded-xl border-2 border-emerald-800 text-emerald-800 font-medium transition-all duration-200 hover:bg-emerald-50 active:scale-95;
+  }
+  .btn-ghost {
+    @apply px-4 py-2 rounded-lg text-gray-600 font-medium transition-all duration-200 hover:bg-gray-100;
+  }
+  .card {
+    @apply bg-white rounded-2xl border border-gray-200 shadow-sm;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-xl hover:border-emerald-300 hover:-translate-y-0.5;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:border-transparent;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-medium border;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+  }
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out;
+  }
+  .animate-pulse-gold {
+    animation: pulseGold 2s ease-in-out infinite;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .brand-logo {
+    display: block;
+    mix-blend-mode: multiply;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(22, 168, 137, 0.3); }
+  50% { box-shadow: 0 0 0 8px rgba(22, 168, 137, 0); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0ede5;
+}
+::-webkit-scrollbar-thumb {
+  background: #0d806d;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #08715f;
+}
+
+/* Chat scrollbar */
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: rgba(26, 93, 58, 0.2);
+  border-radius: 3px;
+}

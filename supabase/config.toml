@@ -1,0 +1,8 @@
+[functions.citizen-assistant]
+verify_jwt = false
+
+[functions.policy-analysis]
+verify_jwt = false
+
+[functions.seed-embeddings]
+verify_jwt = false
